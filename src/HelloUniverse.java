@@ -11,7 +11,7 @@ public class HelloUniverse {
         short annee = sc.nextShort();
         System.out.println("Vous avez saisi l'année : " + annee);
 
-        if(annee > 2006) {
+        if(annee >= 2006) {
             nb_Planete=9;
         }
         else {
