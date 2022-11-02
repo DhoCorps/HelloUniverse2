@@ -12,29 +12,20 @@ public class HelloUniverse {
         System.out.println("Vous avez saisi l'année : " + annee);
 
 
-        if(annee <= 1600) {
-            System.out.printf("Notre système informatique ne dispose pas de données suffisantes pour affirmer avec certitude le nombre de planète reconnu par la communauté scientifique de l'époque en %d :( .",annee);
+        if(annee <= 1600 || annee > 2022) {
+            System.out.printf("Le programme ne dispose pas des données de l'année %d :( .",annee);
         }
-        else if (annee<=1700) {
-            nb_Planete = 7;
+        else {
+            if (annee < 1700) {
+                nb_Planete = 7;
+            } else if (annee <= 1800) {
+                nb_Planete = 8;
+            } else if (annee < 2006) {
+                nb_Planete = 9;
+            } else {
+                nb_Planete = 8;
+            }
             System.out.printf(maChaine, annee, nb_Planete);
         }
-        else if(annee<=1800){
-            nb_Planete = 8;
-            System.out.printf(maChaine,annee,nb_Planete);
-        }
-        else if (annee< 2006){
-            nb_Planete=9;
-            System.out.printf(maChaine,annee,nb_Planete);
-        }
-        else if (annee <= 2022){
-            nb_Planete = 8;
-            System.out.printf(maChaine,annee,nb_Planete);
-        }
-        else{
-            System.out.printf("Nous ne savons pas à l'avance combien de planètes seront dénombrées en %d",annee);
-        }
-
     }
-
 }
