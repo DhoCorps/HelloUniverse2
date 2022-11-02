@@ -1,12 +1,25 @@
+import java.util.Scanner;
+
 public class HelloUniverse {
     static public void main(String... args){
+        String maChaine;
         System.out.println("Hello Universe!!!");
         byte nb_Planete = 8;
-        String maChaine = "Aux dernières nouvelles, le nombre ttotal de planete dans le système solaire était de ";
-        System.out.println(maChaine + nb_Planete );
-        nb_Planete +=1;
-        maChaine = "Il y a quelques années cependant elles étaient au nombre de ";
-        System.out.println( maChaine + nb_Planete);
+
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Veuillez saisir une année :");
+        int str = sc.nextInt();
+        System.out.println("Vous avez saisi l'année : " + str);
+
+        if(str > 2006) {
+            maChaine = "En " + str + " le nombre total de planete dans le système solaire était de ";
+            System.out.println(maChaine + nb_Planete);
+        }
+        else {
+            nb_Planete++;
+            maChaine = "Cependant elles étaient au nombre de ";
+            System.out.println(maChaine + nb_Planete + " en " + str);
+        }
     }
 
 }
