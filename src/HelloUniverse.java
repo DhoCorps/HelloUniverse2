@@ -2,24 +2,22 @@ import java.util.Scanner;
 
 public class HelloUniverse {
     static public void main(String... args){
-        String maChaine;
+        String maChaine = "En %d le nombre de planète dans le système solaire était de %d ";
         System.out.println("Hello Universe!!!");
-        byte nb_Planete = 8;
+        byte nb_Planete;
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Veuillez saisir une année :");
-        int str = sc.nextInt();
-        System.out.println("Vous avez saisi l'année : " + str);
+        short annee = sc.nextShort();
+        System.out.println("Vous avez saisi l'année : " + annee);
 
-        if(str > 2006) {
-            maChaine = "En " + str + " le nombre total de planete dans le système solaire était de ";
-            System.out.println(maChaine + nb_Planete);
+        if(annee > 2006) {
+            nb_Planete=9;
         }
         else {
-            nb_Planete++;
-            maChaine = "Cependant elles étaient au nombre de ";
-            System.out.println(maChaine + nb_Planete + " en " + str);
+            nb_Planete = 8;
         }
+        System.out.printf(maChaine,annee,nb_Planete);
     }
 
 }
